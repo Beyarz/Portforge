@@ -27,3 +27,6 @@ Usage:
 ```
 ./portforge IP startport endport
 ```
+Demo:
+![demo](https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png)
+![result](https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png)
