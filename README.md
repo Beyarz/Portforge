@@ -1,5 +1,5 @@
 # portforge.cr
-This script is inteded to open as many sockets as you which between 1024 - 65535.
+This script is intended to open as many sockets as you which between 1024 - 65535.
 Lower than 1024 works too but you have to be a root user for that.
 
 This can be useful when you don't want people to map out your device
