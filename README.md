@@ -28,5 +28,5 @@ Usage:
 ./portforge IP startport endport
 ```
 Demo:
-<img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="128" width="128" />
-<img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="128" width="128" />
+<img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="256" width="256" />
+<img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="256" width="256" />
