@@ -27,6 +27,7 @@ Usage:
 ```
 ./portforge IP startport endport
 ```
-Demo:</br>
+Demo - the first picture is portforge.cr running and the second one is the result from an Nmap scan.
+As you can see, Nmap things I'm running all these services when in reality, it is just portforge.cr running.</br>
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="160%" width="48%" />
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="160%" width="48%" />
