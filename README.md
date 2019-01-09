@@ -14,7 +14,7 @@ The larger range you pick, the longer it takes for the script to
 load up every socket but I've tried my best to optimize the script
 so it should just take a couple of minutes (depending on the system of course).
 
-# Under the hood
+### Under the hood
 The script works in 2 steps:
 It first performs its own scan on the system to see which port is already open.
 The open ports is then put on one list and the closed ports is put on another list.
