@@ -41,5 +41,5 @@ As you can see, Nmap thinks i'm running all these services when in reality, it i
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="160%" width="48%" />
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="160%" width="48%" />
 
-### Requirements
-- The [compiler](https://crystal-lang.org/reference/installation/)
+### Requirement
+- [The compiler](https://crystal-lang.org/reference/installation/)
