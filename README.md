@@ -25,6 +25,11 @@ While the main fiber is opening a socket on every port,
 another fiber is called under the main one which listens for incoming connections and closes it directly.
 This process is repeated indefinitely, or until you interrupt the script.
 
+### Getting started (You only need to do this once)
+```
+crystal build portforge.cr
+```
+
 ### Usage
 ```
 ./portforge IP startport endport
