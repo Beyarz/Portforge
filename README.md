@@ -30,6 +30,10 @@ This process is repeated indefinitely, or until you interrupt the script.
 crystal build portforge.cr
 ```
 
+### Requirement
+- [The compiler](https://crystal-lang.org/reference/installation/)
+
+
 ### Usage
 ```
 ./portforge IP startport endport
@@ -40,6 +44,3 @@ The first picture is portforge.cr running and the second one is the result from 
 As you can see, Nmap thinks i'm running all these services when in reality, it is just portforge.cr running.</br>
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="160%" width="48%" />
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="160%" width="48%" />
-
-### Requirement
-- [The compiler](https://crystal-lang.org/reference/installation/)
