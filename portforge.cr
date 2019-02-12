@@ -1,5 +1,5 @@
 # # # # # # # #
-# !/usr/bin/env crystal # To be honest, Idk where I got this from.
+# !/usr/bin/env crystal # To be honest, I don't know where I got this from.
 # # # # # # #
 
 # # # # # #
@@ -10,8 +10,6 @@
 # # #
 # Name: portforge.cr
 # #
-
-# Compile & run: crystal build portforge.cr && ./portforge 192.168.0.6 2000 3000
 
 # Library
 require "socket"
@@ -140,8 +138,8 @@ puts "[+] Forging started."
 # Infinite loop until interrupted
 while(true)
 
-  counter = 0
-  closedPorts.each do |port|
+    counter = 0
+    closedPorts.each do |port|
     begin
 
       # Opens a socket on each port
