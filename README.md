@@ -5,7 +5,7 @@ Lower than 1024 works too but you have to be a root user for that.<br>
 This can be useful when you don't want people to map out your device<br>
 to see what you're running and what not, so it's a small step to defeat reconnaissance.<br>
 
-### Technique from the core
+### Technology from the core
 Portforge.cr uses a technique built-in the Crystal compiler called Fibers.<br>
 They are very much like system threads but Fibers is a lot more lightweight<br>
 & the execution is managed through the process [1](https://crystal-lang.org/docs/guides/concurrency.html).<br>
@@ -41,6 +41,6 @@ crystal build portforge.cr
 
 ### Demo
 The first picture is portforge.cr running and the second one is the result from an Nmap scan.<br>
-As you can see, Nmap thinks i'm running all these services when in reality, it is just portforge.cr running.<br>
+As you can see, Nmap thinks I'm running all these services when in reality, it is just portforge.cr running.<br>
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/demo.png" height="160%" width="48%" />
 <img src="https://raw.githubusercontent.com/Beyarz/portforge.cr/master/result.png" height="160%" width="48%" />
