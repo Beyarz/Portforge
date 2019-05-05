@@ -15,7 +15,7 @@ load up every socket but I've tried my best to optimize the script<br>
 so it should just take a couple of minutes (depending on the system of course).<br>
 
 ### Under the hood
-The script works in 2 steps:<br>
+The script works in 2 steps.<br>
 It first performs its own scan on the system to see which port is already open.<br>
 The open ports is then put on one list and the closed ports is put on another list.<br>
 The next step is opening the closed ports, so the script picks the list with all the closed<br>
