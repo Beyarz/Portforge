@@ -1,10 +1,6 @@
-# # # # # # # #
-# !/usr/bin/env crystal # To be honest, I don't know where I got this from.
-# # # # # # #
-
 # # # # # #
 # Created July 23th 2018
-# Copyright (c) 2017 Beyar N.
+# Copyright (c) 2017 Beyar.
 # # # #
 
 # # #
