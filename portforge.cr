@@ -1,28 +1,19 @@
 # # # # # #
 # Created July 23th 2018
-# Copyright (c) 2017 Beyar.
 # # # #
 
-# # #
-# Name: portforge.cr
-# #
-
-# Library
 require "socket"
 
-# Shows the limit
 def limits
   puts "[-] The port can't be lower than 1,"
   puts "[-] nor can it be higher than 65535."
 end
 
-# Shows the usage of this script
 def usage
   puts "[-] Argument: #{PROGRAM_NAME} host start end"
   puts "[-] Example:  #{PROGRAM_NAME} localhost 4440 4445"
 end
 
-# Progress update
 def progress(update)
   update = update.to_f
   case update
@@ -39,7 +30,6 @@ def progress(update)
   end
 end
 
-# ARGV to VAR
 begin
   host = ARGV[0]
   portStart = ARGV[1].to_i
@@ -49,13 +39,11 @@ rescue IndexError
   exit(1)
 end
 
-# Class used to check
-# if run as root
+# Class used to check if run as root
 lib LibC
   fun getuid : UInt16
 end
 
-# Validating input
 approved = 0
 if ARGV.size != 3
   usage()
@@ -81,7 +69,7 @@ else
   end
 end
 
-openPorts = Array(Int32).new
+openPorts = [] of Int32
 closedPorts = [] of Int32
 portTest = (portStart..portEnd)
 notAgain = 0
@@ -90,13 +78,9 @@ allowedUpdate = 1
 
 puts "[!] Scan started."
 
-# Picks every single port from the array
-# and performs the check
 portTest.each do |current_port|
-
-  # Checks which port is open by
-  # trying to open a socket on a port
-  # and decides wether a error is thrown or not
+  # Checks which port is open by trying to open a socket on a port
+  # and decide whether a error is thrown or not.
   begin
     client = TCPSocket.new(host, current_port, dns_timeout = 5)
     openPorts << current_port
@@ -105,10 +89,6 @@ portTest.each do |current_port|
     closedPorts << current_port
   end
 
-  # Shows how far the scanning
-  # have progressed, updates every minute
-  # but performs the calculations on a
-  # separate fiber
   spawn do
     if time == Time.now.second
       if allowedUpdate == 1
@@ -121,27 +101,19 @@ portTest.each do |current_port|
     end
   end
 
-  # Tells the sceduler to continue
   Fiber.yield
-
 end
 
 puts "[!] Scan finished."
-
-# Goes through each closed port
 puts "[+] Forging started."
 
-# Infinite loop until interrupted
 while(true)
 
     counter = 0
     closedPorts.each do |port|
     begin
 
-      # Opens a socket on each port
       server = TCPServer.new(port)
-
-      # Accepts incoming connections and closes it
       spawn do
         server.accept do |incoming|
           incoming.gets
@@ -151,15 +123,12 @@ while(true)
       end
 
       # Catching the binding error, assumes it is already open
-      # Moves over from closed to open as it is open now
+      # Moves the port over from the closed list to the open list
       rescue Errno
         openPorts << closedPorts[counter]
         closedPorts.delete_at(counter)
-
     end
 
-    # Displays when all ports have been moved over to
-    # the other array
     if closedPorts.size < 1
       puts "[+] The ports should be open now."
       puts "[!] To end this proccess you have to interrupt it."
@@ -167,6 +136,5 @@ while(true)
 
     # Used to count the array index
     counter += 1
-
   end
 end
